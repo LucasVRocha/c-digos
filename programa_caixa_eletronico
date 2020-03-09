@@ -1,0 +1,31 @@
+while True:
+    valor = int(input('Qual será o valor sacado?'))
+    if valor > 50:
+        nota50 = valor / 50
+        resto = valor % 50
+        if resto == 0:
+            nota20 = 0
+            nota10 = 0
+            nota1 = 0
+            break
+    if resto > 20 and resto % 50 == 0:
+        nota20 = resto / 20
+        resto = resto % 20
+        if resto == 0:
+            nota10 = 0
+            nota1 = 0
+            break
+    if resto > 10:
+        nota10 = resto / 10
+        resto = resto % 10
+        if resto == 0:
+            nota1 = 0
+            break
+    if resto > 1:
+        nota1 = resto / 1
+        break
+
+print('-=-'*20)
+print('TROCO')
+print('-=-'*20)
+print(f'{nota50} notas de 50 R$\n{nota20} notas de 20 R$\n{nota10} notas de 10 R$\n{nota1} notas de 1 R$')
