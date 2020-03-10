@@ -1,0 +1,13 @@
+import random
+
+contador = 0
+jogadamaquina = random.randint(1,10)
+while True:
+    jogada = int(input('Escolha um número'))
+    parouimpar = str(input('Escolha par ou ímpar'))
+    somadasjogadas = int(jogadamaquina + jogada)
+    if somadasjogadas % 2 == 0 and parouimpar == 'par'  or somadasjogadas % 2 == 1 and parouimpar == 'ímpar':
+        break
+    contador += 1
+    print(f'A máquina jogou {jogadamaquina} mané, tente de novo')
+print(f'Você precisou jogar {contador} vezes para vencer uma máquina que jogou {jogadamaquina}')
